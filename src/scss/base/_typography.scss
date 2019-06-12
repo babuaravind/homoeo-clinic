@@ -1,0 +1,41 @@
+body {
+  font-family: 'lato', 'Cairo', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-primary;
+  padding: 3rem;
+}
+
+.heading {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInRightLeft;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeftRight;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards;
+  }
+}
+
+// animation-iteration-count: 3;
+// animation-delay: 3s;

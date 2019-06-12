@@ -1,0 +1,198 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  20% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInLeftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  40% {
+    opacity: 0.8;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRightLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  40% {
+    opacity: 0.8;
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottomTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-0.08rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'lato', 'Cairo', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #2c77e9;
+  padding: 3rem; }
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInRightLeft;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards; }
+  .heading--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeftRight;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards; }
+
+.text-xs-left {
+  text-align: left; }
+
+.text-xs-right {
+  text-align: right; }
+
+.text-xs-center {
+  text-align: center; }
+
+.text-xs-justify {
+  text-align: justify; }
+
+@media (min-width: 768px) {
+  .text-sm-left {
+    text-align: left; }
+  .text-sm-right {
+    text-align: right; }
+  .text-sm-center {
+    text-align: center; }
+  .text-sm-justify {
+    text-align: justify; } }
+
+@media (min-width: 992px) {
+  .text-md-left {
+    text-align: left; }
+  .text-md-right {
+    text-align: right; }
+  .text-md-center {
+    text-align: center; }
+  .text-md-justify {
+    text-align: justify; } }
+
+@media (min-width: 1200px) {
+  .text-lg-left {
+    text-align: left; }
+  .text-lg-right {
+    text-align: right; }
+  .text-lg-center {
+    text-align: center; }
+  .text-lg-justify {
+    text-align: justify; } }
+
+.btn--white {
+  background-color: white;
+  color: black; }
+  .btn--white::after {
+    background-color: white; }
+
+.btn--animated {
+  animation: moveInBottomTop 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateX(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(44, 119, 233, 0.6), rgba(18, 33, 240, 0.6)), url(../../img/heading-banner-three.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  animation-name: moveInBottomTop;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: backwards;
+  padding-top: 0rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header_logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

@@ -5,7 +5,15 @@ const sass = require('gulp-sass');
 //Compile Sass & Inject into Browser
 gulp.task('sass', () => {
   return gulp
-    .src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
+    .src([
+      'node_modules/bootstrap/scss/bootstrap.scss',
+      'src/scss/*.scss',
+      'src/scss/abstracts/*.scss',
+      'src/scss/base/*.scss',
+      'src/scss/components/*.scss',
+      'src/scss/layout/*.scss',
+      'src/scss/pages/*.scss'
+    ])
     .pipe(sass())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream());
@@ -32,7 +40,15 @@ gulp.task('serve', ['sass'], () => {
     }
   });
   gulp.watch(
-    ['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'],
+    [
+      'node_modules/bootstrap/scss/bootstrap.scss',
+      'src/scss/*.scss',
+      'src/scss/abstracts/*.scss',
+      'src/scss/base/*.scss',
+      'src/scss/components/*.scss',
+      'src/scss/layout/*.scss',
+      'src/scss/pages/*.scss'
+    ],
     ['sass']
   );
   gulp.watch('src/*.html').on('change', browserSync.reload);
