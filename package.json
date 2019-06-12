@@ -1,0 +1,23 @@
+{
+  "name": "homoeo-clinic",
+  "version": "1.0.0",
+  "description": "Front-end static website for Madan Homoeo clinic.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Babu Aravind",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "gulp-cli": "^2.2.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
