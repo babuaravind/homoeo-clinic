@@ -11,11 +11,11 @@
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  animation-name: moveInBottomTop;
-  animation-duration: 0.8s;
+  animation-name: moveInBottom;
+  animation-duration: 0.6s;
   animation-timing-function: ease-in;
   animation-fill-mode: backwards;
-  padding-top: 0rem;
+  padding-top: 3rem;
 
   &__logo-box {
     position: absolute;

@@ -68,3 +68,16 @@
     transform: translateX(0);
   }
 }
+
+// @Desc pushes from bottom.
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
